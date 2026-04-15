@@ -14,10 +14,6 @@ body {
   padding: 3rem 1rem;
 }
 
-/* ========================
-         PROFILE CARD
-      ======================== */
-
 article[data-testid="test-profile-card"] {
   background: white;
   border-radius: 16px;
@@ -29,10 +25,6 @@ article[data-testid="test-profile-card"] {
   flex-direction: column;
   gap: 1.5rem;
 }
-
-/* ========================
-         TOP SECTION: Avatar + Name + Bio
-      ======================== */
 
 .profile-top {
   display: flex;
@@ -72,10 +64,6 @@ p[data-testid="test-user-bio"] {
   max-width: 500px;
 }
 
-/* ========================
-         EPOCH TIME
-      ======================== */
-
 .time-section {
   background: #f9fafb;
   border-radius: 10px;
@@ -93,10 +81,6 @@ p[data-testid="test-user-bio"] {
   color: #032d5d;
   font-size: 14px;
 }
-
-/* ========================
-         SOCIAL LINKS
-      ======================== */
 
 nav[data-testid="test-user-social-links"] {
   display: flex;
@@ -127,10 +111,6 @@ nav[data-testid="test-user-social-links"] a:focus {
   outline: 3px solid #3b82f6;
   outline-offset: 2px;
 }
-
-/* ========================
-         HOBBIES & DISLIKES
-      ======================== */
 
 .lists-row {
   display: grid;
@@ -180,10 +160,6 @@ ul[data-testid="test-user-dislikes"] li::before {
   content: "❌";
   font-size: 13px;
 }
-
-/* ========================
-         RESPONSIVE
-      ======================== */
 
 @media (min-width: 600px) {
   .profile-top {
