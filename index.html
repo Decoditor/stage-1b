@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <article data-testid="test-profile-card">
+      <div class="profile-top">
+        <figure>
+          <img
+            data-testid="test-user-avatar"
+            src="https://i.pravatar.cc/150?img=12"
+            alt="Profile photo of AbdulSamad"
+            width="100"
+            height="100"
+          />
+          <figcaption>AbdulSamad</figcaption>
+        </figure>
+
+        <div>
+          <header>
+            <h2 data-testid="test-user-name">AbdulSamad</h2>
+          </header>
+          <p data-testid="test-user-bio">
+            Frontend developer and computer science student passionate about
+            building accessible, responsive, and well-tested web interfaces.
+            Currently sharpening skills in React, vanilla JS, and modern CSS.
+          </p>
+        </div>
+      </div>
+
+      <!-- EPOCH TIME -->
+      <div class="time-section" aria-label="Current time in milliseconds">
+        🕐 Current time (ms):
+        <span
+          data-testid="test-user-time"
+          aria-live="polite"
+          id="epoch-time"
+        ></span>
+      </div>
+
+      <nav data-testid="test-user-social-links" aria-label="Social media links">
+        <a
+          data-testid="test-user-social-github"
+          href="https://github.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile"
+        >
+          🐙 GitHub
+        </a>
+        <a
+          data-testid="test-user-social-twitter"
+          href="https://twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter profile"
+        >
+          🐦 Twitter
+        </a>
+        <a
+          data-testid="test-user-social-linkedin"
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile"
+        >
+          💼 LinkedIn
+        </a>
+      </nav>
+
+      <div class="lists-row">
+        <section class="list-section" aria-labelledby="hobbies-heading">
+          <h3 id="hobbies-heading">Hobbies</h3>
+          <ul data-testid="test-user-hobbies" aria-label="Hobbies list">
+            <li>Building side projects</li>
+            <li>Reading tech blogs</li>
+            <li>Solving coding challenges</li>
+            <li>Learning geopolitics</li>
+          </ul>
+        </section>
+
+        <section class="list-section" aria-labelledby="dislikes-heading">
+          <h3 id="dislikes-heading">Dislikes</h3>
+          <ul data-testid="test-user-dislikes" aria-label="Dislikes list">
+            <li>Inaccessible websites</li>
+            <li>Unreadable code</li>
+            <li>Inconsistent designs</li>
+            <li>Slow feedback loops</li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <script>
+      const epochEl = document.getElementById("epoch-time");
+
+      function updateTime() {
+        epochEl.textContent = Date.now();
+      }
+
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
